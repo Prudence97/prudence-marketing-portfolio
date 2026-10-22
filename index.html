@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Prudence Emudianughe | Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@600;700&display=swap">
+<style>
+/* Concept: the KOH results booklet, turned into a welcome pack. Letter first, then the kit she needs, then how the work flows. */
+:root{
+  --bg:#F1EEE6; --surface:#FBFAF6; --ink:#14142B; --ink2:#5A5870; --line:#DDD8CA;
+  --a:#9E2D63; --b:#159E7A; --gold:#F2B705; --gold-ink:#14142B; --wa:#159E7A; --mail:#9E2D63; --cal:#D98A00;
+  --display:"Poppins","Inter",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111120; --surface:#1A1A2C; --ink:#F1EEE6; --ink2:#A9A7BC; --line:#2D2D44;
+  --a:#C9579A; --b:#2BB38C; --wa:#2BB38C; --mail:#C9579A; --cal:#F2B705; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111120; --surface:#1A1A2C; --ink:#F1EEE6; --ink2:#A9A7BC; --line:#2D2D44;
+  --a:#C9579A; --b:#2BB38C; --wa:#2BB38C; --mail:#C9579A; --cal:#F2B705; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.65 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 72px}
+.wrap{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.15}
+h1{font-size:clamp(36px,6.4vw,60px);letter-spacing:-.02em}
+h2{font-size:clamp(22px,3.2vw,30px);letter-spacing:-.01em}
+h3{font-size:16px}
+p{margin:0}
+.eyebrow{font:600 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.sub{color:var(--ink2);max-width:66ch}
+.sec{display:grid;gap:20px}
+.sec>header{display:grid;gap:8px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:12px;min-width:0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.note{font-size:13px;color:var(--ink2)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:32px;align-items:center}
+.stamp{display:inline-flex;align-items:center;background:var(--gold);color:var(--gold-ink);font:700 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;border-radius:4px;margin-bottom:18px;transform:rotate(-2deg)}
+.hero h1 em{font-style:normal;color:var(--a)}
+.badge{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:12px}
+.badge .hole{width:56px;height:10px;border-radius:99px;background:var(--bg);border:1px solid var(--line);margin:0 auto 4px}
+.badge .hello{font:700 13px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;text-align:center;background:var(--a);color:#fff;border-radius:8px;padding:10px}
+.badge .name{font:700 26px/1.2 var(--display);text-align:center;padding:14px 0;border-bottom:2px dashed var(--line)}
+.badge .row{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.badge .row b{font-weight:600;text-align:right}
+
+/* letter */
+.letter{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,4vw,40px);display:grid;gap:14px;max-width:760px}
+.letter p{max-width:64ch}
+.letter .sign{font:700 20px/1.2 var(--display);color:var(--a);margin-top:6px}
+
+/* kit */
+.kit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.tool .ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c)}
+.tool .ic svg{width:24px;height:24px}
+.tool .what{font-size:14px;color:var(--ink2)}
+.val{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.val code{font:500 13px/1.4 var(--mono);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 10px;overflow-wrap:anywhere;min-width:0;flex:1}
+.val .todo{font:500 12px/1.4 var(--mono);color:var(--ink2);border:1.5px dashed var(--line);border-radius:8px;padding:7px 10px;flex:1}
+.btn{font:600 12px/1 var(--mono);border:1px solid var(--c);color:var(--c);background:transparent;border-radius:8px;padding:8px 10px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{background:color-mix(in srgb,var(--c) 12%,transparent)}
+.btn:focus-visible,.check input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tool .tip{font-size:13px;border-left:3px solid var(--c);padding-left:10px}
+
+/* journey */
+.journey{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:j;list-style:none;margin:0;padding:0}
+.journey li{counter-increment:j;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:6px;align-content:start;position:relative}
+.journey li::before{content:counter(j);font:700 15px/1 var(--mono);background:var(--gold);color:var(--gold-ink);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.journey li p{font-size:13px;color:var(--ink2)}
+.callout{background:color-mix(in srgb,var(--b) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--b) 35%,var(--line));border-radius:12px;padding:14px 18px;font-size:14px}
+
+/* doc cards */
+.docs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.doc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.doc .k{font:700 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--a)}
+.doc dl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:6px 12px;margin:0;font-size:14px}
+.doc dt{font:600 11px/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+.doc dd{margin:0}
+.doc .rem{background:color-mix(in srgb,var(--gold) 22%,var(--surface));border-radius:8px;padding:8px 12px;font-size:13px}
+
+/* table */
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font:600 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+td:first-child{font-weight:600;white-space:nowrap}
+
+/* day */
+.day{display:grid;gap:0}
+.slot{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.slot:last-child{border-bottom:0}
+.slot .t{font:700 12px/1.6 var(--mono);color:var(--a);font-variant-numeric:tabular-nums}
+.slot.rest .t{color:var(--b)}
+.slot p{font-size:14px;color:var(--ink2)}
+.week{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.week li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;align-items:start;font-size:14px}
+.week b{font:700 12px/1.6 var(--mono);background:var(--bg);border:1px solid var(--line);border-radius:6px;text-align:center}
+
+/* tips */
+.tips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.tips li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14px}
+.tips .n{font:700 16px/1 var(--mono);color:var(--gold-ink);background:var(--gold);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.tips b{display:block;font-size:15px}
+
+/* checklist */
+.check{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.check label{display:flex;gap:12px;align-items:flex-start;font-size:14px;cursor:pointer;padding:8px 10px;border-radius:8px}
+.check label:hover{background:var(--bg)}
+.check input{width:18px;height:18px;margin-top:2px;accent-color:var(--b);flex:none}
+.check input:checked+span{text-decoration:line-through;color:var(--ink2)}
+
+.foot{text-align:center;font-family:var(--display);font-size:clamp(20px,3vw,26px)}
+.foot span{color:var(--a)}
+
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);font:600 12px/1 var(--mono);padding:10px 14px;border-radius:8px;opacity:0;transition:opacity .15s;pointer-events:none}
+
+/* tabs */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font:700 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.brand b{color:var(--a)}
+.tabs{display:flex;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px;flex-wrap:wrap}
+.tabs button{font:600 13px/1 var(--body);border:0;background:transparent;color:var(--ink2);padding:10px 16px;border-radius:999px;cursor:pointer}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.tabs button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.panelset{display:flex;flex-direction:column;gap:56px}
+.next{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:18px 22px}
+.next button{font:600 13px/1 var(--body);background:var(--a);color:#fff;border:0;border-radius:999px;padding:12px 18px;cursor:pointer}
+
+/* accounts */
+.funnel{display:grid;gap:10px}
+.fstep{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;align-items:center}
+.fstep .l{font:600 12px/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--ink2)}
+.fstep .t{position:relative;height:26px}
+.fstep .t i{display:block;height:100%;width:var(--w);min-width:4px;background:var(--c,var(--a));border-radius:3px 6px 6px 3px}
+.fstep .t span{position:absolute;top:50%;transform:translateY(-50%);left:calc(var(--w) + 10px);font:700 13px/1 var(--mono);white-space:nowrap}
+.fstep .t span.in{left:12px;color:#fff}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:6px;align-content:start}
+.tile .big{font:700 32px/1 var(--mono);letter-spacing:-.02em;color:var(--c,var(--ink))}
+.tile p{font-size:14px;color:var(--ink2)}
+.tile .when{font:500 11px/1.3 var(--mono);color:var(--ink2);letter-spacing:.04em}
+.board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.lane{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:12px;align-content:start;min-width:0}
+.lane .head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.lane .count{font:700 12px/1 var(--mono);background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;font-weight:500;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 12px;line-height:1.3}
+.chip small{font:500 11px/1 var(--mono);color:var(--ink2);margin-left:4px}
+.lane .todo-line{font-size:13px;border-left:3px solid var(--c);padding-left:10px}
+.lane.wide{grid-column:1/-1}
+
+/* portfolio */
+.events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.event{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:8px;align-content:start}
+.event .k{font:700 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--b)}
+.event p{font-size:14px;color:var(--ink2)}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3vw,28px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:24px}
+.case .side{display:grid;gap:10px;align-content:start}
+.case .num{font:700 13px/1 var(--mono);color:var(--gold-ink);background:var(--gold);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.case .tools{display:flex;flex-wrap:wrap;gap:6px}
+.case .tools span{font:500 11px/1 var(--mono);border:1px solid var(--line);border-radius:6px;padding:5px 8px;color:var(--ink2)}
+.case .body{display:grid;gap:10px;font-size:14px}
+.case .body b{font-family:var(--display);font-size:13px;letter-spacing:.02em}
+.case .body ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.routes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.route{border-radius:12px;padding:14px;background:color-mix(in srgb,var(--c) 14%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 30%,var(--line));font-size:13px;display:grid;gap:4px}
+.route b{font-family:var(--display);font-size:14px}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skills span{font:600 13px/1 var(--body);background:var(--ink);color:var(--bg);border-radius:999px;padding:9px 14px}
+
+@media (max-width:860px){.routes{grid-template-columns:repeat(2,minmax(0,1fr))}.events,.tiles{grid-template-columns:minmax(0,1fr)}.case{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:700px){.board{grid-template-columns:minmax(0,1fr)}.fstep{grid-template-columns:minmax(0,1fr);gap:4px}.routes{grid-template-columns:minmax(0,1fr)}.tabs{width:100%}.tabs button{flex:1;padding:10px 8px}}
+
+@media (max-width:860px){.journey{grid-template-columns:repeat(2,minmax(0,1fr))}.kit,.three{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:700px){
+  .hero,.two,.docs,.tips{grid-template-columns:minmax(0,1fr)}
+  .journey{grid-template-columns:minmax(0,1fr)}
+  .slot{grid-template-columns:minmax(0,1fr);gap:2px}
+  .doc dl{grid-template-columns:minmax(0,1fr);gap:2px}
+  .doc dd{margin-bottom:6px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<nav class="topbar">
+  <div class="brand"><b>Earn4rmAds</b> · Prudence Emudianughe</div>
+  <div class="tabs" role="tablist" aria-label="Sections">
+    <button role="tab" id="t-guide" aria-controls="guide" aria-selected="true">Handover guide</button>
+    <button role="tab" id="t-accounts" aria-controls="accounts" aria-selected="false">Accounts</button>
+    <button role="tab" id="t-work" aria-controls="work" aria-selected="false">My work</button>
+  </div>
+</nav>
+
+<div class="panelset" role="tabpanel" id="guide" aria-labelledby="t-guide">
+<section class="hero">
+  <div>
+    <div class="stamp">Welcome aboard</div>
+    <h1>A warm welcome to <em>Earn4rmAds</em></h1>
+    <p class="sub" style="margin-top:16px">Your role handover and practical guide for Business Development and Sales Operations at Adverion Nigeria Limited. Read the letter first, set up your kit, then keep the rest close for your first few weeks.</p>
+  </div>
+  <div class="badge" aria-label="Guide details">
+    <div class="hole"></div>
+    <div class="hello">Hello, my role is</div>
+    <div class="name">Business Development &amp; Sales Ops</div>
+    <div class="row"><span>Platform</span><b>Earn4rmAds</b></div>
+    <div class="row"><span>Company</span><b>Adverion Nigeria Ltd</b></div>
+    <div class="row"><span>Prepared by</span><b>Prudence Emudianughe</b></div>
+    <div class="row"><span>Date</span><b>October 2026</b></div>
+  </div>
+</section>
+
+<section class="sec" id="letter">
+  <header><div class="eyebrow">Start here</div><h2>A note from me to you</h2></header>
+  <div class="letter">
+    <p>Dear Colleague,</p>
+    <p>Welcome to Earn4rmAds! I put this guide together so your first weeks feel a little easier. A new role comes with plenty to learn, and I hope this gives you a useful place to start.</p>
+    <p>Working here, I have talked with businesses, learnt the advertising market, built relationships with partners, supported advertiser onboarding and looked for ways to make our processes more organised. The role is more than finding new clients. It is about building relationships, keeping conversations moving, understanding what businesses need and helping opportunities grow from first interest to live campaigns and repeat business.</p>
+    <p>Some days you will research and reach out to prospects. Other days you will be in meetings, giving demos, following up campaigns or preparing reports. Good records make a real difference.</p>
+    <p>Ask questions, ask for clarification when you need it, and share ideas that could improve how we work. Processes will change as the business grows, so use this guide alongside the latest instructions and priorities from management.</p>
+    <p>My biggest advice: stay curious, keep your pipeline updated, communicate clearly and follow through. Small, steady actions add up.</p>
+    <p>Wishing you a smooth start and a rewarding time with the team.</p>
+    <p>Warm regards,</p>
+    <p class="sign">Prudence Emudianughe</p>
+  </div>
+</section>
+
+<section class="sec" id="kit">
+  <header><div class="eyebrow">Day one</div><h2>Things you'll need</h2><p class="sub">Three channels run most of the day-to-day work. Get these set up first.</p></header>
+  <div class="kit" id="kit-list"></div>
+</section>
+
+<section class="sec" id="platform">
+  <header><div class="eyebrow">The product</div><h2>Earn4rmAds in a minute</h2>
+    <p class="sub">Earn4rmAds is a rewarded advertising platform run by Adverion Nigeria Limited and powered by Bloocode Technology Limited. Businesses run campaigns that ask people to watch video ads, answer surveys and polls, install apps or complete registrations. People earn airtime, data or cash for each completed task, and advertisers see the results on their dashboard.</p></header>
+  <ol class="journey">
+    <li><h3>Find</h3><p>Research businesses, industries and decision-makers.</p></li>
+    <li><h3>Start talking</h3><p>Outreach, discovery calls, meetings and demos.</p></li>
+    <li><h3>Develop</h3><p>Understand the need, share a proposal, agree next steps.</p></li>
+    <li><h3>Activate</h3><p>Support sign-up, campaign setup and launch.</p></li>
+    <li><h3>Keep</h3><p>Check progress, pursue renewals and top-ups.</p></li>
+  </ol>
+  <div class="callout"><b>Remember:</b> a prospect in the pipeline is not an active advertiser yet. Each stage needs its own follow-up and its own record.</div>
+</section>
+
+<section class="sec" id="tools">
+  <header><div class="eyebrow">Your toolbox</div><h2>The documents and how to use them</h2><p class="sub">Each one follows the same pattern: when to use it, how to use it, and one thing to remember.</p></header>
+  <div class="docs">
+    <article class="doc"><div class="k">Essential</div><h3>Advertiser pipeline / CRM</h3><dl>
+      <dt>When</dt><dd>Every time you contact, meet or hear from a prospect.</dd>
+      <dt>How</dt><dd>Search before adding to avoid duplicates. Record the decision-maker, the stage, the last contact date and the next follow-up. Note responses and agreed actions.</dd></dl>
+      <div class="rem">The pipeline is only useful when it shows what is happening today.</div></article>
+    <article class="doc"><div class="k">Automation</div><h3>CRM reminders</h3><dl>
+      <dt>When</dt><dd>Each morning, and whenever a reminder email lands.</dd>
+      <dt>How</dt><dd>A Google Apps Script flags overdue prospects and emails a reminder. Open the record, check the dates and status, then act.</dd></dl>
+      <div class="rem">Check whether the prospect already replied before you follow up.</div></article>
+    <article class="doc"><div class="k">Platform</div><h3>Advertiser dashboard</h3><dl>
+      <dt>When</dt><dd>Checking an advertiser's account, campaigns or wallet.</dd>
+      <dt>How</dt><dd>Look at account status, campaign status, wallet balance, dates and performance. The Advertiser Dashboard Metrics Guide explains every number.</dd></dl>
+      <div class="rem">Never promise a launch, funding or a fix until the team confirms it.</div></article>
+    <article class="doc"><div class="k">Weekly</div><h3>KPI and activity report</h3><dl>
+      <dt>When</dt><dd>Every Friday.</dd>
+      <dt>How</dt><dd>Report four things separately: activity (contacted), pipeline movement (meetings, proposals), outcomes (approved accounts, live campaigns) and retention (renewals, top-ups).</dd></dl>
+      <div class="rem">Report what actually happened, what is outstanding and what is next.</div></article>
+    <article class="doc"><div class="k">Selling</div><h3>Sales deck and proposals</h3><dl>
+      <dt>When</dt><dd>Outreach, discovery meetings and demos.</dd>
+      <dt>How</dt><dd>Learn the client's goal first, then pick the selling points that fit. Strong sectors: fintech, FMCG, e-commerce, telecoms, agencies, health tech, edtech and media.</dd></dl>
+      <div class="rem">Use the current approved deck only.</div></article>
+    <article class="doc"><div class="k">Partners</div><h3>Affiliate, aggregator and VAS materials</h3><dl>
+      <dt>When</dt><dd>Talking with referral partners, agencies or VAS providers.</dd>
+      <dt>How</dt><dd>Know which document is for which partner: the affiliate programme and sign-up form, the terms and conditions, and the VAS offer or insertion order.</dd></dl>
+      <div class="rem">Some of these need management approval before you share them.</div></article>
+  </div>
+</section>
+
+<section class="sec" id="role">
+  <header><div class="eyebrow">The work</div><h2>What the role covers</h2><p class="sub">An overview of the workstreams. Confirm your exact priorities and KPIs with management.</p></header>
+  <div class="panel tw"><table>
+    <thead><tr><th>Workstream</th><th>What it involves</th></tr></thead>
+    <tbody>
+      <tr><td>Advertiser acquisition</td><td>Research companies, find decision-makers, send outreach, book discovery calls.</td></tr>
+      <tr><td>Onboarding</td><td>Guide interested advertisers through sign-up, account approval and campaign readiness.</td></tr>
+      <tr><td>Campaign activation</td><td>Coordinate requirements, creatives, links, budgets and launch status with the team.</td></tr>
+      <tr><td>Existing advertisers</td><td>Follow up live or inactive campaigns and explore renewals or top-ups.</td></tr>
+      <tr><td>Partnerships</td><td>Build relationships with agencies, affiliates, aggregators and VAS providers.</td></tr>
+      <tr><td>Sales operations</td><td>Keep the CRM clean, organise follow-ups, watch overdue records.</td></tr>
+      <tr><td>Reporting</td><td>Weekly summary of activity, pipeline, outcomes, blockers and priorities.</td></tr>
+      <tr><td>Market development</td><td>Test messaging, gather feedback, find new sectors.</td></tr>
+    </tbody></table></div>
+</section>
+
+<section class="sec" id="rhythm">
+  <header><div class="eyebrow">Finding your rhythm</div><h2>A day and a week, roughly</h2><p class="sub">A suggestion to adapt, not a fixed policy. Meetings and urgent client needs will move things around.</p></header>
+  <div class="two">
+    <div class="panel"><h3>A typical day</h3><div class="day">
+      <div class="slot"><span class="t">9:00–9:30</span><p><b>Settle in.</b> Check WhatsApp, email, your calendar and outstanding tasks.</p></div>
+      <div class="slot"><span class="t">9:30–11:00</span><p><b>Prospecting.</b> Research businesses, update records, prepare outreach.</p></div>
+      <div class="slot"><span class="t">11:00–1:00</span><p><b>Outreach.</b> Contact prospects, follow up, book meetings.</p></div>
+      <div class="slot rest"><span class="t">1:00–2:00</span><p><b>Lunch and reset.</b></p></div>
+      <div class="slot"><span class="t">2:00–3:30</span><p><b>Meetings and demos.</b> Discovery calls and team coordination.</p></div>
+      <div class="slot"><span class="t">3:30–4:30</span><p><b>Follow-ups.</b> Onboarding, renewals, top-ups, partner talks.</p></div>
+      <div class="slot"><span class="t">4:30–5:00</span><p><b>Wrap up.</b> Update the CRM, flag blockers, plan tomorrow.</p></div>
+    </div></div>
+    <div class="panel"><h3>A typical week</h3><ul class="week">
+      <li><b>Mon</b><span>Review the pipeline and plan the week.</span></li>
+      <li><b>Tue</b><span>Outreach, follow-ups and booking meetings.</span></li>
+      <li><b>Wed</b><span>Discovery conversations and demos.</span></li>
+      <li><b>Thu</b><span>Proposals, partner follow-ups and campaign requirements.</span></li>
+      <li><b>Fri</b><span>Review outcomes, send the weekly report, set next week's priorities.</span></li>
+    </ul>
+    <p class="note" style="margin-top:8px">Send client meeting invites through the booking link in your kit, so every demo lands on the shared calendar.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="team">
+  <header><div class="eyebrow">The people</div><h2>Working with the team</h2></header>
+  <div class="panel" style="max-width:760px">
+    <p>Get to know the people you work with and how each person contributes. Management sets priorities, reviews progress and gives direction, so come to those conversations prepared and with clear updates.</p>
+    <p>Learn each person's role, the preferred channel for each kind of message and how approvals work. When you need help, explain the situation, say what you have already checked and name the decision or support you need.</p>
+    <p>Like any growing business, priorities shift. Staying organised, adapting and raising issues early will carry you a long way.</p>
+  </div>
+</section>
+
+<section class="sec" id="tips">
+  <header><div class="eyebrow">From experience</div><h2>Eight things I learnt</h2></header>
+  <ol class="tips">
+    <li><span class="n">1</span><div><b>Keep the pipeline current.</b>Update it right after every important call, email or meeting.</div></li>
+    <li><span class="n">2</span><div><b>Give every prospect a next step.</b>Write when and why you will follow up. Avoid "contact later".</div></li>
+    <li><span class="n">3</span><div><b>Understand before you pitch.</b>App installs and consumer research are different conversations.</div></li>
+    <li><span class="n">4</span><div><b>Make follow-ups useful.</b>Refer to the last conversation and suggest a clear next step.</div></li>
+    <li><span class="n">5</span><div><b>Check before you commit.</b>Confirm specs, pricing, approvals and funding with the team first.</div></li>
+    <li><span class="n">6</span><div><b>Track activity and outcomes separately.</b>Emails sent and campaigns launched are different numbers.</div></li>
+    <li><span class="n">7</span><div><b>Start with the time-sensitive work.</b>Promised callbacks and near-launch deals come before research.</div></li>
+    <li><span class="n">8</span><div><b>Improve the process as you learn it.</b>Suggest a tracker or template, and confirm changes first.</div></li>
+  </ol>
+</section>
+
+<section class="sec" id="situations">
+  <header><div class="eyebrow">Quick reference</div><h2>When this happens, do this</h2></header>
+  <div class="panel tw"><table>
+    <thead><tr><th>Situation</th><th>Next step</th></tr></thead>
+    <tbody>
+      <tr><td>A prospect is interested</td><td>Book a call with the booking link, learn the need, record the next action.</td></tr>
+      <tr><td>A prospect goes quiet</td><td>Follow up politely, space out attempts, update the record.</td></tr>
+      <tr><td>Signed up, not launched</td><td>Check account and campaign status, find what is missing, coordinate.</td></tr>
+      <tr><td>A campaign has ended</td><td>Review results, then explore a renewal or a new campaign.</td></tr>
+      <tr><td>Asked for a discount</td><td>Write down the request and get approval before you confirm.</td></tr>
+      <tr><td>A technical question</td><td>Note it and bring in the right technical contact.</td></tr>
+      <tr><td>A task is blocked</td><td>Say what is pending, what you have done and what you need.</td></tr>
+      <tr><td>A KPI is behind</td><td>Review the pipeline, find the main constraint, agree a fix.</td></tr>
+    </tbody></table></div>
+</section>
+
+<section class="sec" id="first-week">
+  <header><div class="eyebrow">Tick as you go</div><h2>Your first week</h2><p class="sub">Your ticks stay in this browser only.</p></header>
+  <div class="panel" style="max-width:760px"><ul class="check" id="check"></ul></div>
+</section>
+
+<div class="next"><p><b>Next:</b> meet the brands, agencies and partners you'll be working with.</p><button data-go="accounts">Open the accounts</button></div>
+<p class="foot">Glad you're here. <span>Welcome to the team.</span></p>
+</div>
+
+<!-- ============ ACCOUNTS ============ -->
+<div class="panelset" role="tabpanel" id="accounts" aria-labelledby="t-accounts" hidden>
+<section class="sec">
+  <header><div class="stamp">Who I worked with</div><h1 style="font-size:clamp(32px,5.4vw,50px)">The brands, agencies and <em style="font-style:normal;color:var(--a)">partners</em></h1>
+  <p class="sub">Organisations I brought onto Earn4rmAds or met with between July and October 2026, from the Earn4rmAds Complete Pipeline (updated 22 October 2026). Names only. Contacts and notes stay in the workbook.</p></header>
+  <div class="tiles">
+    <div class="tile" style="--c:var(--b)"><div class="big">17</div><p>Brands and partners with campaigns live on the platform.</p></div>
+    <div class="tile" style="--c:var(--a)"><div class="big">22</div><p>Pilot advertisers who created accounts and set up campaigns.</p></div>
+    <div class="tile" style="--c:var(--cal)"><div class="big">10+</div><p>Meetings with brands and partners, plus 10+ in-person business visits.</p></div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><div class="eyebrow">On the platform</div><h2>Brands running campaigns</h2></header>
+  <div class="board">
+    <div class="lane wide" style="--c:var(--b)"><div class="head"><h3>Live on Earn4rmAds</h3><span class="count">17</span></div>
+      <div class="chips"><span class="chip">Postly</span><span class="chip">Frames on Flames</span><span class="chip">BuyScrap Nigeria <small>4 campaigns</small></span><span class="chip">Seemless HR</span><span class="chip">Crowdy Socials</span><span class="chip">EventTrolley</span><span class="chip">Nautica</span><span class="chip">OTA</span><span class="chip">PricePally</span><span class="chip">Prodev &amp; Talent Apply</span><span class="chip">CareerBuddy</span><span class="chip">NitroSwitch</span><span class="chip">Value Photography</span><span class="chip">Paul Word Business</span><span class="chip">Peakesparkle</span><span class="chip">+ 2 independent advertisers</span></div></div>
+    <div class="lane wide" style="--c:var(--a)"><div class="head"><h3>Signed up and onboarding</h3><span class="count">3</span></div>
+      <div class="chips"><span class="chip">Smart DNA / Wow Effect</span><span class="chip">Expert Listing</span><span class="chip">Drugstore.ng &amp; VirtualRx.ng</span></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><div class="eyebrow">Established brands</div><h2>Brands I met and pitched</h2></header>
+  <div class="board">
+    <div class="lane" style="--c:var(--a)"><div class="head"><h3>Meetings held</h3><span class="count">14</span></div>
+      <div class="chips"><span class="chip">UAC Foods</span><span class="chip">Promasidor</span><span class="chip">Deekay Group</span><span class="chip">Utiva</span><span class="chip">Tuteria</span><span class="chip">Erisco Foods</span><span class="chip">Sanlam Allianz</span><span class="chip">Total Health Trust</span><span class="chip">JustMarkets SSA</span><span class="chip">Cube Cover</span><span class="chip">Dufil</span><span class="chip">FairMoney</span><span class="chip">AhavaPlan</span><span class="chip">Apex Network</span></div></div>
+    <div class="lane" style="--c:var(--cal)"><div class="head"><h3>In conversation</h3><span class="count">6</span></div>
+      <div class="chips"><span class="chip">Unilever Nigeria (Closeup)</span><span class="chip">Flour Mills of Nigeria</span><span class="chip">First Bank of Nigeria</span><span class="chip">Mikano International</span><span class="chip">Burger King</span><span class="chip">Rise</span></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><div class="eyebrow">Agencies and partners</div><h2>The people who bring advertisers to us</h2></header>
+  <div class="board">
+    <div class="lane" style="--c:var(--b)"><div class="head"><h3>VAS, aggregator and referral partners</h3><span class="count">10</span></div>
+      <div class="chips"><span class="chip">NitroSwitch</span><span class="chip">Nitro 121</span><span class="chip">Glo Marketing</span><span class="chip">HML Consulting</span><span class="chip">VDL Technologies</span><span class="chip">Teledeus</span><span class="chip">Fundam Digitals</span><span class="chip">IDCS Ltd</span><span class="chip">Nina-Jojer</span><span class="chip">Truthware Solutions</span></div></div>
+    <div class="lane" style="--c:var(--a)"><div class="head"><h3>Advertising agencies</h3><span class="count">86 reached</span></div>
+      <div class="chips"><span class="chip">Primaganet <small>working together</small></span><span class="chip">Onewildcard</span><span class="chip">Hephzibah Experiential</span><span class="chip">Red Wolf</span><span class="chip">BBDO West Africa</span><span class="chip">Dentsu Creative</span><span class="chip">DDB Lagos</span><span class="chip">Insight Publicis</span><span class="chip">Noah's Ark</span><span class="chip">7even Interactive</span><span class="chip">+ 76 more AAAN members</span></div></div>
+  </div>
+  <p class="note">For the handover: the current stage, contact and next step for every name above are in the Master Contacts sheet of the Complete Pipeline workbook.</p>
+</section>
+<div class="next"><p><b>Next:</b> the story behind these names.</p><button data-go="work">See my work</button></div>
+</div>
+
+<!-- ============ MY WORK ============ -->
+<div class="panelset" role="tabpanel" id="work" aria-labelledby="t-work" hidden>
+<section class="hero">
+  <div>
+    <div class="stamp">Portfolio · Jul–Oct 2026</div>
+    <h1>Prudence <em>Emudianughe</em></h1>
+    <p class="sub" style="margin-top:16px">Business Development Lead at Earn4rmAds. I grew the advertiser and partner pipeline for a rewarded advertising platform, from first research and outreach through to pilot onboarding, campaign activation and renewals.</p>
+  </div>
+  <div class="badge" aria-label="At a glance">
+    <div class="hello">At a glance</div>
+    <div class="row"><span>Brands live on the platform</span><b>17</b></div>
+    <div class="row"><span>Pilot accounts created</span><b>22</b></div>
+    <div class="row"><span>Brand and partner meetings</span><b>10+</b></div>
+    <div class="row"><span>In-person business visits</span><b>10+</b></div>
+    <div class="row"><span>Agencies reached</span><b>86</b></div>
+    <div class="row"><span>Industry events</span><b>3</b></div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><div class="eyebrow">My role</div><h2>What I looked after</h2></header>
+  <div class="panel" style="max-width:780px">
+    <p>Earn4rmAds connects businesses with audiences through rewarded video ads, surveys, opinion polls and other campaign formats. I worked across the full business development process: finding the right advertisers and decision-makers, pitching the platform, following up on interest, onboarding pilot advertisers, coordinating campaign launches and recording each commercial opportunity.</p>
+    <p>I also built partnerships with advertising agencies, value-added service providers, aggregators and affiliates, and I set up the pipeline and automated reminders the team now uses to track every conversation.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <header><div class="eyebrow">Out in the industry</div><h2>Where I represented Earn4rmAds</h2></header>
+  <div class="events">
+    <article class="event"><div class="k">Agency industry</div><h3>53rd AAAN Annual General Meeting</h3><p>I represented the platform at the Association of Advertising Agencies of Nigeria AGM, themed "AdVolution". I then followed up with the agencies about the pilot programme and campaign incentives.</p></article>
+    <article class="event"><div class="k">Tech expo</div><h3>GITEX Nigeria</h3><p>I demoed the product on the floor. Results: 2 on-the-spot sign-ups, 6 expressions of interest and 5 contacts for follow-up.</p></article>
+    <article class="event"><div class="k">Marketing community</div><h3>NIMN Ikeja Chapter meeting</h3><p>At the National Institute of Marketing of Nigeria, I introduced Earn4rmAds to marketing professionals beyond the agency world.</p></article>
+  </div>
+  <div class="callout"><b>On the ground in Lagos.</b> Beyond events, I made more than 10 in-person visits to businesses to introduce the platform face to face.</div>
+</section>
+
+<section class="sec">
+  <header><div class="eyebrow">Partnerships</div><h2>Five routes to market</h2><p class="sub">Alongside selling to advertisers directly, I opened channels that bring advertisers to the platform for us.</p></header>
+  <div class="routes">
+    <div class="route" style="--c:var(--a)"><b>Direct brands</b><span>Enterprise and SME advertisers</span></div>
+    <div class="route" style="--c:var(--b)"><b>Agencies</b><span>86 AAAN member agencies</span></div>
+    <div class="route" style="--c:var(--cal)"><b>VAS &amp; aggregators</b><span>NitroSwitch, Glo Marketing, HML, VDL</span></div>
+    <div class="route" style="--c:var(--a)"><b>Affiliates</b><span>Referral terms and commission</span></div>
+    <div class="route" style="--c:var(--b)"><b>Retention</b><span>Restarts, renewals, top-ups</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><div class="eyebrow">Case studies</div><h2>What I built and how it went</h2></header>
+  <article class="case"><div class="side"><span class="num">1</span><h3>Enterprise and agency prospecting</h3><div class="tools"><span>Research</span><span>Outreach</span><span>Discovery</span></div></div>
+    <div class="body"><p><b>Challenge.</b> A new platform needed conversations with established brands that had never heard of it.</p>
+    <p><b>What I did.</b> I built a ranked prospect list of nearly 500 brands, organised it into outreach waves and reached decision-makers by email, phone, LinkedIn and WhatsApp. I followed up with discovery meetings and in-person visits.</p>
+    <p><b>Result.</b> Meetings with brands including UAC Foods, Promasidor, Deekay Group, Sanlam Allianz, Utiva, Tuteria and Total Health Trust, and conversations with Unilever Nigeria, Flour Mills and First Bank.</p></div></article>
+  <article class="case"><div class="side"><span class="num">2</span><h3>Pipeline and follow-up automation</h3><div class="tools"><span>Google Sheets</span><span>Apps Script</span><span>Email automation</span></div></div>
+    <div class="body"><p><b>Challenge.</b> The team was tracking hundreds of prospects, follow-up dates and pending approvals by memory.</p>
+    <p><b>What I did.</b> I structured the pipeline into nine clear stages, from interest confirmed to pilot live, and wrote Google Apps Script reminders that email the team and flag overdue prospects.</p>
+    <p><b>Result.</b> A process that keeps running after I leave. It powers weekly pipeline reviews and KPI reports.</p></div></article>
+  <article class="case"><div class="side"><span class="num">3</span><h3>Pilot onboarding and reactivation</h3><div class="tools"><span>Onboarding</span><span>Account management</span></div></div>
+    <div class="body"><p><b>Challenge.</b> Interested advertisers often stalled between signing up and going live.</p>
+    <p><b>What I did.</b> I walked advertisers through registration, explained campaign formats, chased creatives and checked what was blocking each launch. Once campaigns ended, I shared their results and discussed renewals.</p>
+    <p><b>Result.</b> 22 pilot advertisers created accounts and 17 brands and partners now run live campaigns, including Postly, Frames on Flames, BuyScrap Nigeria, Seemless HR and Crowdy Socials. In October I also restarted 9 low-running campaigns and brought back a dormant advertiser.</p></div></article>
+  <article class="case"><div class="side"><span class="num">4</span><h3>VAS, aggregator and affiliate partnerships</h3><div class="tools"><span>Partnerships</span><span>Commercial terms</span></div></div>
+    <div class="body"><p><b>Challenge.</b> Direct sales alone grow slowly. Partners who already serve advertisers can bring them in faster.</p>
+    <p><b>What I did.</b> I introduced the platform to NitroSwitch, Glo Marketing, HML Consulting, VDL Technologies, Fundam Digitals and other VAS providers and aggregators, ran demo calls, and shared proposed test offers. I mapped 100 affiliate prospects and agreed referral and commission terms with management before offering them.</p>
+    <p><b>Result.</b> NitroSwitch is now a working partner with campaigns live on the platform, and partnership talks continue with the other providers.</p></div></article>
+  <article class="case"><div class="side"><span class="num">5</span><h3>Sales materials and reporting</h3><div class="tools"><span>Pitch decks</span><span>Rate cards</span><span>KPI reports</span></div></div>
+    <div class="body"><p><b>What I did.</b> I produced pitch decks, pilot explainers, sign-up guides, sample insertion orders and campaign reports. I also wrote weekly KPI reports that track activity, pipeline movement, outcomes and retention separately.</p>
+    <p><b>Result.</b> Every conversation had a clear next step and the right document to support it.</p></div></article>
+</section>
+
+<section class="sec">
+  <header><div class="eyebrow">What I bring</div><h2>Skills I used every week</h2></header>
+  <div class="skills"><span>B2B business development</span><span>Partnerships and channels</span><span>Sales operations</span><span>CRM automation</span><span>Stakeholder mapping</span><span>Event prospecting</span><span>Customer onboarding</span><span>Account retention</span><span>KPI reporting</span><span>Ad tech</span></div>
+  <p class="note">Figures come from the Earn4rmAds Complete Pipeline and weekly reports, July to October 2026.</p>
+</section>
+<p class="foot">Thanks for reading. <span>Let's build something together.</span></p>
+</div>
+
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* Fill in the real links here. Leave a value empty and the card shows "to be shared". */
+var KIT=[
+ {k:"wa",name:"WhatsApp",what:"The team group for quick updates, and the business line for advertiser chats.",value:"",label:"Team group link",action:"Open",tip:"Use it for quick updates. Put decisions and anything a client agrees to in email too."},
+ {k:"mail",name:"Work email",what:"Your Earn4rmAds address for clients, partners, proposals and the weekly report.",value:"",label:"Your work email",action:"",tip:"Copy your manager on proposals and anything that needs approval."},
+ {k:"cal",name:"Calendar bookings",what:"The booking link prospects use to pick a time for a discovery call or demo.",value:"",label:"Booking page link",action:"Open",tip:"Add it to your email signature and every outreach message."}
+];
+var ICONS={
+ wa:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg>',
+ mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+ cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 15h3"/></svg>'
+};
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+document.getElementById('kit-list').innerHTML=KIT.map(function(t,i){
+  var v=t.value?'<code id="kv'+i+'">'+esc(t.value)+'</code><button class="btn" data-copy="'+i+'">Copy</button>'+(t.action&&/^https?:/.test(t.value)?'<a class="btn" href="'+esc(t.value)+'" target="_blank" rel="noopener">'+t.action+'</a>':''):'<span class="todo">'+t.label+' · to be shared on day one</span>';
+  return '<article class="tool" style="--c:var(--'+t.k+')"><div class="ic">'+ICONS[t.k]+'</div><h3>'+t.name+'</h3><p class="what">'+t.what+'</p><div class="val">'+v+'</div><p class="tip">'+t.tip+'</p></article>';
+}).join('');
+var toast=document.getElementById('toast'),tt;
+function say(m){toast.textContent=m;toast.style.opacity=1;clearTimeout(tt);tt=setTimeout(function(){toast.style.opacity=0},1600)}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('[data-copy]'); if(!b)return;
+  var i=b.getAttribute('data-copy'), txt=KIT[i].value;
+  var sel=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('kv'+i));var s=getSelection();s.removeAllRanges();s.addRange(r);say('Selected. Press copy on your keyboard.')};
+  try{navigator.clipboard.writeText(txt).then(function(){say('Copied')},sel)}catch(err){sel()}
+});
+
+var TABS=['guide','accounts','work'];
+function show(id,scroll){
+  if(TABS.indexOf(id)<0)id='guide';
+  TABS.forEach(function(t){document.getElementById(t).hidden=(t!==id);document.getElementById('t-'+t).setAttribute('aria-selected',t===id)});
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  if(scroll)window.scrollTo({top:0});
+}
+TABS.forEach(function(t){document.getElementById('t-'+t).addEventListener('click',function(){show(t,false)})});
+document.addEventListener('click',function(e){var g=e.target.closest('[data-go]');if(g)show(g.getAttribute('data-go'),true)});
+document.querySelector('.tabs').addEventListener('keydown',function(e){
+  if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+  var cur=TABS.findIndex(function(t){return document.getElementById('t-'+t).getAttribute('aria-selected')==='true'});
+  var n=TABS[(cur+(e.key==='ArrowRight'?1:TABS.length-1))%TABS.length];show(n,false);document.getElementById('t-'+n).focus();
+});
+show((location.hash||'').slice(1),false);
+
+var STEPS=["Join the team WhatsApp group and save the business line","Sign in to your work email and set up your signature with the booking link","Connect your calendar and test the booking page","Get access to the advertiser pipeline / CRM","Walk through the advertiser dashboard with the Metrics Guide","Read the current sales deck and partner materials","Meet each team member and learn what they look after","Confirm your KPIs and weekly report format with management"];
+var KEY='e4a-welcome-checks',saved={};
+try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+document.getElementById('check').innerHTML=STEPS.map(function(s,i){return '<li><label><input type="checkbox" id="c'+i+'"'+(saved[i]?' checked':'')+'><span>'+s+'</span></label></li>'}).join('');
+document.getElementById('check').addEventListener('change',function(e){
+  var i=e.target.id.slice(1); saved[i]=e.target.checked;
+  try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(err){}
+});
+</script>
+
+</body>
+</html>
